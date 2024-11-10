@@ -9,3 +9,18 @@
     --White: hsl(0, 0%, 100%);
     --Black: hsl(0, 0%, 7%)
 }
+
+main {
+    display: grid;
+}
+
+/* universal */
+
+.card-wrapper {
+    /* NOTE: Some of this will be changed !!! */
+    border: 1px solid black;
+    border-radius: .6rem;
+    margin: 1rem;
+    padding: 1rem;
+
+}
