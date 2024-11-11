@@ -6,21 +6,186 @@
     --Purple-500: hsl(256, 67%, 59%);
     --Yellow-100: hsl(31, 66%, 93%);
     --Yellow-500: hsl(39, 100%, 71%);
+    --Dark-white: hsl(0deg 0% 96.08%);
     --White: hsl(0, 0%, 100%);
-    --Black: hsl(0, 0%, 7%)
+    --Black: hsl(0, 0%, 7%);
+
 }
 
 main {
     display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    background-color: var(--Dark-white);
 }
+
 
 /* universal */
 
 .card-wrapper {
-    /* NOTE: Some of this will be changed !!! */
-    border: 1px solid black;
+    font-weight: 400;
+    min-width: 300px;
     border-radius: .6rem;
     margin: 1rem;
     padding: 1rem;
+
+}
+
+/* background color modifiers */
+
+.card-wrapper--purple-500 {
+    background-color: var(--Purple-500);
+    color: var(--White);
+}
+
+.card-wrapper--purple-100 {
+    background-color: var(--Purple-100);
+}
+
+.card-wrapper--yellow-500 {
+    background-color: var(--Yellow-500);
+}
+
+.card-wrapper--yellow-100 {
+    background-color: var(--Yellow-100);
+}
+
+.card-wrapper--white {
+    background-color: var(--White);
+}
+
+
+/* Span modifiers */
+
+.card-wrapper__span--yellow {
+    color: var(--Yellow-500);
+}
+
+.card-wrapper__span--purple {
+    color: var(--Purple-500);
+}
+
+.card-wrapper__span--italic {
+    font-style: italic;
+}
+
+/* Social Media Card */
+
+.social-media {
+    padding: 2rem;
+    font-size: 1.6rem;
+    text-align: center;
+
+}
+
+.social-media__header {
+    line-height: 2.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.social-media__image {
+    width: 65%;
+    margin: auto;
+    margin-bottom: .4rem;
+}
+
+.social-media__description {
+    font-size: 1.2rem;
+}
+
+/* Menage Platforms  card*/
+
+.menage-platforms__header {
+    line-height: 1.4rem;
+
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+/* Posting schedule card */
+
+.posting-schedule {
+    line-height: 1.6rem;
+
+    overflow: hidden;
+}
+
+.posting-schedule__header {
+    font-size: 1.6rem;
+}
+
+.posting-schedule__image {
+    position: relative;
+    width: 70%;
+    bottom: -2.4rem;
+}
+
+/* schedule posts card */
+
+.schedule-posts__header,
+.schedule-posts__description {
+    padding: 1rem;
+    text-align: center;
+
+}
+
+/* Grow followers card*/
+
+.grow-followers__image {
+    width: 70%;
+    margin: .5rem auto;
+}
+
+.grow-followers__header {
+    font-size: 2rem;
+    line-height: 2rem;
+    padding: 1.4rem;
+    text-align: center;
+}
+
+/* Faster growth card */
+
+.faster-growth {}
+
+.faster-growth__header {
+    font-size: 2.4rem;
+}
+
+.faster-growth__description {
+    padding: 1rem 0;
+}
+
+.faster-growth__image {
+    width: 50%;
+}
+
+/* Create post card */
+
+.create-post {
+    padding: 1rem 2rem;
+}
+
+.create-post__header {
+
+    line-height: 1.6rem;
+    margin: 1.6rem auto;
+}
+
+.create-post__image {
+    width: 55%;
+}
+
+/* AI content card */
+
+.ai-content__header {
+
+    font-size: 2rem;
+    line-height: 1.6rem;
+    padding: 1.4rem 0;
+}
+
+.ai-content__image {
+    width: 60%;
 
 }
