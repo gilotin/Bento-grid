@@ -15,11 +15,11 @@
 
 /* universal */
 
-.card-wrapper {
-    border-radius: 1rem;
-    padding: 1rem;
-
+body {
+    background-color: var(--Dark-white);
 }
+
+
 
 main {
     margin: 1rem;
@@ -30,18 +30,20 @@ main {
         "grid-group-one grid-group-two grid-group-two grid-group-three"
         "grid-group-one grid-group-four grid-group-four grid-group-four";
     gap: 1.5rem;
-    background-color: var(--Dark-white);
 }
 
 main>* {
     display: grid;
 }
 
+.card-wrapper {
+    border-radius: .6rem;
+
+}
 
 .grid-group-one {
     grid-area: grid-group-one;
     gap: 1.5rem;
-
 }
 
 .grid-group-two {
@@ -104,20 +106,116 @@ main>* {
     font-style: italic;
 }
 
-/* Create post card */
+/* grid-group-one */
 
 .create-post {
-    padding: 5rem 1rem;
-
+    font-size: 2rem;
+    padding: 4rem 2rem;
 
 }
 
 .create-post__header {
+    letter-spacing: -4px;
     line-height: 2.6rem;
     margin-bottom: 2rem;
 }
 
-.create-post__image {
-    margin: auto;
-    width: 55%;
+.ai-content {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    letter-spacing: -4px;
+    padding: 1.8rem;
+}
+
+.ai-content__header {
+    margin-bottom: 3rem;
+}
+
+/* grid-group-two */
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.social-media__header {
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+}
+
+.social-media__image {
+    width: 40%;
+}
+
+.social-media__description {
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.menage-platforms {
+    overflow: hidden;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.menage-platforms__header {
+    padding: 4rem 2rem 2rem;
+    line-height: 1.8rem;
+
+}
+
+.menage-platforms__image {
+    position: relative;
+    top: 1.6rem;
+    left: 3rem;
+    max-width: none;
+    width: 116%;
+}
+
+.posting-schedule {
+    padding: 2rem;
+    overflow: hidden;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    position: relative;
+}
+
+.posting-schedule__header {
+    margin-bottom: 1.6rem;
+}
+
+.posting-schedule__image {
+    position: absolute;
+    width: 78%;
+}
+
+/* grid-group-three */
+
+.schedule-posts {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 3rem 2rem;
+    overflow: hidden;
+}
+
+.schedule-posts__header {
+    margin-bottom: 1rem;
+}
+
+.schedule-posts__image {
+    position: relative;
+    max-width: 160%;
+    margin-bottom: 1rem;
+    left: 2rem;
+
+}
+
+.schedule-posts__description {
+    line-height: 1.4rem;
+
 }
