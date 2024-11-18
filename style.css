@@ -1,7 +1,6 @@
 :root {
 
-    font-family: "DM+Sans", sans-serif;
-
+    font-family: "DM Sans", sans-serif;
     --Purple-100: hsl(254, 88%, 90%);
     --Purple-500: hsl(256, 67%, 59%);
     --Yellow-100: hsl(31, 66%, 93%);
@@ -20,65 +19,33 @@ body {
 }
 
 
-
 main {
-    margin: 1rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "grid-group-one grid-group-two grid-group-two grid-group-three"
-        "grid-group-one grid-group-two grid-group-two grid-group-three"
-        "grid-group-one grid-group-four grid-group-four grid-group-four";
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
     gap: 1.5rem;
+    margin: 2rem 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
 }
 
-main>* {
-    display: grid;
-}
 
 .card-wrapper {
     border-radius: .6rem;
-
+    padding: 1rem;
 }
 
-.grid-group-one {
-    grid-area: grid-group-one;
-    gap: 1.5rem;
+.card-wrapper--purple-100 {
+    background-color: var(--Purple-100);
 }
-
-.grid-group-two {
-    gap: 1.5rem;
-    grid-area: grid-group-two;
-}
-
-.grid-group-two__inside-element {
-    gap: 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-
-.grid-group-three {
-    grid-area: grid-group-three;
-}
-
-.grid-group-four {
-    grid-template-areas: "left right";
-    gap: 1.5rem;
-    grid-template-columns: .98fr 2fr;
-    grid-area: grid-group-four;
-
-}
-
-/* background color modifiers */
 
 .card-wrapper--purple-500 {
     background-color: var(--Purple-500);
     color: var(--White);
 }
 
-.card-wrapper--purple-100 {
-    background-color: var(--Purple-100);
+.card-wrapper--yellow-100 {
+    background-color: var(--Yellow-100);
 }
 
 .card-wrapper--yellow-500 {
@@ -93,9 +60,6 @@ main>* {
     background-color: var(--White);
 }
 
-
-/* Span modifiers */
-
 .card-wrapper__span--yellow {
     color: var(--Yellow-500);
 }
@@ -108,156 +72,239 @@ main>* {
     font-style: italic;
 }
 
-/* grid-group-one */
-
-.create-post {
-    font-size: 2rem;
-    padding: 4rem 2rem;
-
-}
-
-.create-post__header {
-    letter-spacing: -4px;
-    line-height: 2.6rem;
-    margin-bottom: 2rem;
-}
-
-.ai-content {
-    font-size: 2rem;
-    line-height: 2.6rem;
-    letter-spacing: -4px;
-    padding: 1.8rem;
-}
-
-.ai-content__header {
-    margin-bottom: 3rem;
-}
-
-/* grid-group-two */
+/* Social Media Card */
 
 .social-media {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--Purple-500);
+    color: var(--White);
+    padding: 2rem;
+    font-size: 1.6rem;
     text-align: center;
-    padding: 1rem;
+
 }
 
 .social-media__header {
-    font-size: 4rem;
-    line-height: 4rem;
-    margin-bottom: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 1.2rem;
+    padding-inline: 2rem;
 }
 
 .social-media__image {
-    width: 40%;
+    width: 65%;
+    margin: auto;
+    margin-bottom: .4rem;
 }
 
 .social-media__description {
-    font-size: 1.6rem;
-    padding: 1rem;
+    font-size: 1.2rem;
 }
 
-.menage-platforms {
-    overflow: hidden;
-    font-size: 1.4rem;
-    line-height: 2rem;
-}
+/* Menage Platforms  card*/
 
 .menage-platforms__header {
-    padding: 4rem 2rem 2rem;
-    line-height: 1.8rem;
+    line-height: 1.4rem;
 
+    margin-top: 1rem;
+    font-size: 1.4rem;
 }
 
-.menage-platforms__image {
-    position: relative;
-    top: 1.6rem;
-    left: 3rem;
-    max-width: none;
-    width: 116%;
-}
+/* Posting schedule card */
 
 .posting-schedule {
-    padding: 2rem;
+    line-height: 1.6rem;
     overflow: hidden;
-    font-size: 1.6rem;
-    line-height: 2rem;
-    position: relative;
 }
 
 .posting-schedule__header {
-    margin-bottom: 1.6rem;
+    font-size: 1.6rem;
 }
 
 .posting-schedule__image {
-    position: absolute;
-    width: 78%;
-    top: 13rem;
-}
-
-/* grid-group-three */
-
-.schedule-posts {
-    font-size: 1.4rem;
-    line-height: 2rem;
-    padding: 3rem 2rem;
-    overflow: hidden;
-}
-
-.schedule-posts__header {
-    margin-bottom: 1rem;
-}
-
-.schedule-posts__image {
     position: relative;
-    max-width: 160%;
-    margin-bottom: 1rem;
-    left: 2rem;
-
+    width: 70%;
+    bottom: -2.4rem;
 }
 
+/* schedule posts card */
+
+.schedule-posts__header,
 .schedule-posts__description {
-    line-height: 1.4rem;
-    font-size: 1.6rem;
+    padding: 1rem;
+    text-align: center;
 
 }
 
-/* grid-group-four */
-
-.faster-growth {
-    grid-area: left;
-    padding: 2rem;
-}
-
-.faster-growth__header {
-    font-size: 4rem;
-}
-
-.faster-growth__description {
-    margin-bottom: 2rem;
-    font-size: 1.6rem;
-}
-
-.faster-growth__image {
-    width: 90%;
-}
-
-
-.grow-followers {
-    display: flex;
-    flex-direction: row;
-    padding: 2rem;
-}
+/* Grow followers card */
 
 .grow-followers__image {
-    width: 50%;
+    width: 70%;
+    margin: .5rem auto;
 }
 
 .grow-followers__header {
-    align-self: center;
-    font-size: 2.6rem;
-    line-height: 3rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    padding: 1.4rem;
+    text-align: center;
+}
 
+/* Faster growth card */
+
+.faster-growth {}
+
+.faster-growth__header {
+    font-size: 2.4rem;
+}
+
+.faster-growth__description {
+    padding: 1rem 0;
+}
+
+.faster-growth__image {
+    width: 50%;
+}
+
+/* AI content card */
+
+.ai-content__header {
+
+    font-size: 2rem;
+    line-height: 1.6rem;
+    padding: 1.4rem 0;
+}
+
+.ai-content__image {
+    width: 60%;
+
+}
+
+/* Social Media Card */
+
+.social-media {
+    padding: 2rem;
+    font-size: 1.6rem;
+    text-align: center;
+
+}
+
+.social-media__header {
+    line-height: 2.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.social-media__image {
+    width: 65%;
+    margin: auto;
+    margin-bottom: .4rem;
+}
+
+.social-media__description {
+    font-size: 1.2rem;
+}
+
+/* Menage Platforms  card*/
+
+.menage-platforms__header {
+    line-height: 1.4rem;
+
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+
+/* Faster growth card */
+
+
+.faster-growth__header {
+    font-size: 2.4rem;
+}
+
+.faster-growth__description {
+    padding: 1rem 0;
+}
+
+.faster-growth__image {
+    width: 50%;
+}
+
+/* Create post card */
+
+.create-post {
+    padding: 1rem 2rem;
+}
+
+.create-post__header {
+
+    line-height: 1.6rem;
+    margin: 1.6rem auto;
+}
+
+.create-post__image {
+    width: 55%;
+}
+
+@media (min-width:1024px) {
+
+    body {
+        display: grid;
+        max-height: 100vh;
+    }
+
+
+    main {
+        width: 80%;
+        height: 85vh;
+        align-self: center;
+        justify-self: center;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-areas: "card1 card1 card2 card2 card2 card2 card3 card3 "
+            "card1 card1 card2 card2 card2 card2 card3 card3 "
+            "card1 card1 card2 card2 card2 card2 card3 card3 "
+            "card1 card1 card2 card2 card2 card2 card3 card3 "
+            "card1 card1 card4 card4 card5 card5 card3 card3 "
+            "card6 card6 card4 card4 card5 card5 card3 card3 "
+            "card6 card6 card4 card4 card5 card5 card3 card3 "
+            "card6 card6 card7 card7 card8 card8 card8 card8 "
+            "card6 card6 card7 card7 card8 card8 card8 card8 "
+            "card6 card6 card7 card7 card8 card8 card8 card8 ";
+    }
+
+    .create-post {
+        grid-area: card1;
+    }
+
+    .social-media {
+        grid-area: card2;
+    }
+
+    .schedule-posts {
+        grid-area: card3;
+    }
+
+    .menage-platforms {
+        grid-area: card4;
+    }
+
+    .posting-schedule {
+        grid-area: card5;
+    }
+
+    .ai-content {
+        grid-area: card6;
+    }
+
+    .faster-growth {
+        grid-area: card7;
+    }
+
+    /* grow followers card */
+
+    .grow-followers {
+        grid-area: card8;
+    }
+
+    .grow-followers__image {
+        width: 30%;
+    }
 }
