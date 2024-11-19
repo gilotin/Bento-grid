@@ -16,17 +16,17 @@
 
 body {
     background-color: var(--Dark-white);
+    font-weight: 500;
 }
 
 
 main {
     display: grid;
+    gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
-    gap: 1.5rem;
-    margin: 2rem 1rem;
-    font-weight: 500;
     line-height: 1.5rem;
+    margin: 2rem 1rem;
 }
 
 
@@ -77,8 +77,8 @@ main {
 .social-media {
     background-color: var(--Purple-500);
     color: var(--White);
-    padding: 2rem;
     font-size: 1.6rem;
+    padding: 2rem;
     text-align: center;
 
 }
@@ -90,9 +90,9 @@ main {
 }
 
 .social-media__image {
-    width: 65%;
+    margin-bottom: 0.4rem;
     margin: auto;
-    margin-bottom: .4rem;
+    width: 65%;
 }
 
 .social-media__description {
@@ -102,10 +102,9 @@ main {
 /* Menage Platforms  card*/
 
 .menage-platforms__header {
-    line-height: 1.4rem;
-
-    margin-top: 1rem;
     font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin-top: 1rem;
 }
 
 /* Posting schedule card */
@@ -120,9 +119,9 @@ main {
 }
 
 .posting-schedule__image {
+    bottom: -2.4rem;
     position: relative;
     width: 70%;
-    bottom: -2.4rem;
 }
 
 /* schedule posts card */
@@ -150,7 +149,6 @@ main {
 
 /* Faster growth card */
 
-.faster-growth {}
 
 .faster-growth__header {
     font-size: 2.4rem;
@@ -167,7 +165,6 @@ main {
 /* AI content card */
 
 .ai-content__header {
-
     font-size: 2rem;
     line-height: 1.6rem;
     padding: 1.4rem 0;
@@ -181,8 +178,8 @@ main {
 /* Social Media Card */
 
 .social-media {
-    padding: 2rem;
     font-size: 1.6rem;
+    padding: 2rem;
     text-align: center;
 
 }
@@ -193,22 +190,23 @@ main {
 }
 
 .social-media__image {
-    width: 65%;
-    margin: auto;
     margin-bottom: .4rem;
+    margin: auto;
+    width: 65%;
 }
 
 .social-media__description {
     font-size: 1.2rem;
+    font-weight: 200;
 }
 
 /* Menage Platforms  card*/
 
 .menage-platforms__header {
-    line-height: 1.4rem;
 
-    margin-top: 1rem;
     font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin-top: 1rem;
 }
 
 
@@ -235,7 +233,7 @@ main {
 
 .create-post__header {
 
-    line-height: 1.6rem;
+    line-height: 1.7rem;
     margin: 1.6rem auto;
 }
 
@@ -243,7 +241,7 @@ main {
     width: 55%;
 }
 
-@media (min-width:1024px) {
+@media (min-width:1440px) {
 
     body {
         display: grid;
@@ -252,12 +250,12 @@ main {
 
 
     main {
-        width: 80%;
-        height: 85vh;
         align-self: center;
-        justify-self: center;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(10, 1fr);
+        height: 90vh;
+        justify-self: center;
+        width: 70%;
         grid-template-areas: "card1 card1 card2 card2 card2 card2 card3 card3 "
             "card1 card1 card2 card2 card2 card2 card3 card3 "
             "card1 card1 card2 card2 card2 card2 card3 card3 "
@@ -270,41 +268,149 @@ main {
             "card6 card6 card7 card7 card8 card8 card8 card8 ";
     }
 
+    /* Create post card */
+
     .create-post {
         grid-area: card1;
+
     }
+
+    .create-post__header {
+        font-size: 2.2rem;
+        letter-spacing: -3px;
+        margin: 2.6rem auto;
+    }
+
+
+    .create-post__image {
+        width: 95%;
+    }
+
+    /* Social Media card */
 
     .social-media {
         grid-area: card2;
     }
 
+    .social-media__header {
+        font-size: 3rem;
+        line-height: 3rem;
+        margin-block: 1.2rem;
+    }
+
+    .social-media__image {
+        width: 40%;
+    }
+
+    /* Schedule Post card */
+
     .schedule-posts {
         grid-area: card3;
+        overflow: hidden;
     }
+
+    .schedule-posts__header,
+    .schedule-posts__description {
+        text-align: start;
+    }
+
+    .schedule-posts__header {
+        font-size: 1.8rem;
+        letter-spacing: -1px;
+        margin-top: 1rem;
+    }
+
+    .schedule-posts__image {
+        left: 1rem;
+        max-width: 163%;
+        position: relative;
+    }
+
+
+    .schedule-posts__description {
+        font-size: 1rem;
+        letter-spacing: 0px;
+        line-height: 1.2rem;
+    }
+
+    /* Menage platforms card */
 
     .menage-platforms {
         grid-area: card4;
+        overflow: hidden;
     }
 
-    .posting-schedule {
-        grid-area: card5;
+    .menage-platforms__image {
+        max-width: 147%;
+        position: relative;
     }
+
+    .menage-platforms__header {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.4rem;
+        margin-top: 1rem;
+    }
+
+    /* Posting schedule card */
+
+    .posting-schedule {
+        font-size: 1.8rem;
+        font-weight: 600;
+        grid-area: card5;
+        line-height: 1.4rem;
+    }
+
+    .posting-schedule__image {
+        width: 100%;
+        bottom: -1.4rem;
+    }
+
+    /* Ai content card */
 
     .ai-content {
         grid-area: card6;
     }
 
+    .ai-content__header {
+        font-size: 2.2rem;
+        letter-spacing: -2px;
+        line-height: 1.8rem;
+        padding: 1rem 0;
+    }
+
+    .ai-content__image {
+        padding-block: 1rem;
+        width: 100%;
+    }
+
+    /* Faster Growth card */
+
     .faster-growth {
         grid-area: card7;
+        padding: 2rem 1rem;
+    }
+
+    .faster-growth__image {
+        width: 90%;
     }
 
     /* grow followers card */
 
     .grow-followers {
         grid-area: card8;
+        display: flex;
+        align-items: center;
+    }
+
+    .grow-followers__header {
+        text-align: start;
     }
 
     .grow-followers__image {
-        width: 30%;
+        max-width: 40%;
     }
+
+
+
 }

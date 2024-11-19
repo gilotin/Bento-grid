@@ -40,7 +40,7 @@ select {
     font: inherit;
 }
 
-/* 7. Avoid text overflows */
+/* 7. Avoid text overflows and font weight */
 p,
 h1,
 h2,
@@ -49,6 +49,7 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
+    font-weight: 500;
 }
 
 /* 8. Improve line wrapping */
