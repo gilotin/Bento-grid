@@ -155,7 +155,7 @@ main {
 }
 
 .faster-growth__description {
-    padding: 1rem 0;
+    margin-bottom: 1rem;
 }
 
 .faster-growth__image {
@@ -210,20 +210,6 @@ main {
 }
 
 
-/* Faster growth card */
-
-
-.faster-growth__header {
-    font-size: 2.4rem;
-}
-
-.faster-growth__description {
-    padding: 1rem 0;
-}
-
-.faster-growth__image {
-    width: 50%;
-}
 
 /* Create post card */
 
@@ -333,7 +319,6 @@ main {
         font-size: 0.7rem;
         letter-spacing: 0px;
         line-height: 1.2rem;
-        padding: 0;
         padding-top: 1rem;
     }
 
@@ -350,10 +335,10 @@ main {
     }
 
     .menage-platforms__header {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         font-weight: 600;
-        line-height: 1.4rem;
-        margin-top: 1rem;
+        line-height: 1.1rem;
+        padding-inline: 0.1rem;
     }
 
     /* Posting schedule card */
@@ -384,7 +369,8 @@ main {
     }
 
     .ai-content__image {
-        /* max-width: 100%; */
+        width: 100%;
+        margin-top: 0.6rem
     }
 
     /* Faster Growth card */
@@ -398,6 +384,12 @@ main {
         width: 90%;
     }
 
+    .faster-growth__description {
+        font-size: 0.8rem;
+        margin-block: 1rem;
+        /* max-width: 100%; */
+    }
+
     /* grow followers card */
 
     .grow-followers {
@@ -408,6 +400,8 @@ main {
 
     .grow-followers__header {
         text-align: start;
+        font-size: 1.5rem;
+        line-height: 1;
     }
 
     .grow-followers__image {
