@@ -128,7 +128,7 @@ main {
 
 .schedule-posts__header,
 .schedule-posts__description {
-    padding: 1rem;
+    margin: 0.6rem;
     text-align: center;
 
 }
@@ -148,6 +148,10 @@ main {
 }
 
 /* Faster growth card */
+
+.faster-growth {
+    padding-block: 2.4rem;
+}
 
 
 .faster-growth__header {
@@ -227,11 +231,13 @@ main {
     width: 55%;
 }
 
-@media (min-width:1440px) {
+@media (min-width:1024px) {
 
     body {
-        display: grid;
-        max-height: 100vh;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        height: 100vh;
     }
 
 
@@ -239,7 +245,7 @@ main {
         align-self: center;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(10, 1fr);
-        height: 90vh;
+        height: 640px;
         justify-self: center;
         width: 820px;
         grid-template-areas: "card1 card1 card2 card2 card2 card2 card3 card3 "
